@@ -2,6 +2,7 @@ package backenddm20231n;
 
 import backenddm20231n.view.ManterDepartamento;
 import backenddm20231n.view.ManterDiretor;
+import backenddm20231n.view.ManterDiretoresDepartamentos;
 import backenddm20231n.view.ManterDisciplina;
 import backenddm20231n.view.ManterFatecs;
 import backenddm20231n.view.ManterLogradouro;
@@ -37,7 +38,7 @@ public class BackEndDm20231n {
         String msg = " 0 - Sair \n 1 - Usuario \n 2 - Pessoa \n 3 - Logradouro "
                 + "\n 4 - PessoasLogradouros \n 5 - UsuariosPessoas \n 6 - Fatecs "
                 + "\n 7 - PessoasFatecs \n 8 - Disciplina \n 9 - PessoasDisciplina "
-                + "\n 10 - Diretores \n 11 - Departamentos";
+                + "\n 10 - Diretores \n 11 - Departamentos \n 12 - DiretoresDepartamentos";
         int num = Integer.parseInt(JOptionPane.showInputDialog(msg));
         switch (num) {
             case 0:
@@ -77,8 +78,11 @@ public class BackEndDm20231n {
             case 11:
                 ManterDepartamento.menu();
                 break;
+            case 12:
+                ManterDiretoresDepartamentos.menu();
+                break;
             default:
-                System.out.println("Opção inválido");
+                System.out.println("Opção inválida");
         }
     }
     

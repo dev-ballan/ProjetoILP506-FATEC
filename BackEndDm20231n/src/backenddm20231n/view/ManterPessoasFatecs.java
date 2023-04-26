@@ -45,51 +45,51 @@ public class ManterPessoasFatecs {
         int idP = Integer.parseInt(JOptionPane.showInputDialog("IDP"));
         int idF = Integer.parseInt(JOptionPane.showInputDialog("IDF"));
         String obs = JOptionPane.showInputDialog("OBS");
-        PessoasFatecs plEnt = new PessoasFatecs(idP,idF,obs);
-        ControllerPessoasFatecs contPL = new ControllerPessoasFatecs();
-        PessoasFatecs plSaida = contPL.inserir(plEnt);
-        JOptionPane.showMessageDialog(null,plSaida.toString());
+        PessoasFatecs pfEnt = new PessoasFatecs(idP,idF,obs);
+        ControllerPessoasFatecs contPF = new ControllerPessoasFatecs();
+        PessoasFatecs pfSaida = contPF.inserir(pfEnt);
+        JOptionPane.showMessageDialog(null,pfSaida.toString());
     }
 
     private static void alterar() throws SQLException, ClassNotFoundException {
         int id = Integer.parseInt(JOptionPane.showInputDialog("ID"));
         int idP = Integer.parseInt(JOptionPane.showInputDialog("IDP"));
-        int idL = Integer.parseInt(JOptionPane.showInputDialog("IDL"));
+        int idF = Integer.parseInt(JOptionPane.showInputDialog("IDF"));
         String obs = JOptionPane.showInputDialog("OBS");
-        PessoasFatecs plEnt = new PessoasFatecs(id,idP,idL,obs);
-        ControllerPessoasFatecs contPL = new ControllerPessoasFatecs();
-        PessoasFatecs plSaida = contPL.alterar(plEnt);
-        JOptionPane.showMessageDialog(null,plSaida.toString());
+        PessoasFatecs pfEnt = new PessoasFatecs(id,idP,idF,obs);
+        ControllerPessoasFatecs contPF = new ControllerPessoasFatecs();
+        PessoasFatecs pfSaida = contPF.alterar(pfEnt);
+        JOptionPane.showMessageDialog(null,pfSaida.toString());
     }
 
     private static void buscar() throws SQLException, ClassNotFoundException {
         int id = Integer.parseInt(JOptionPane.showInputDialog("ID"));
-        PessoasFatecs plEnt = new PessoasFatecs(id);
-        ControllerPessoasFatecs contPL = new ControllerPessoasFatecs();
-        PessoasFatecs plSaida = contPL.buscar(plEnt);
-        JOptionPane.showMessageDialog(null,plSaida.toString());
-        JOptionPane.showMessageDialog(null,plSaida.getPessoa().toString());
-        JOptionPane.showMessageDialog(null,plSaida.getFatec().toString());
+        PessoasFatecs pfEnt = new PessoasFatecs(id);
+        ControllerPessoasFatecs contPF = new ControllerPessoasFatecs();
+        PessoasFatecs pfSaida = contPF.buscar(pfEnt);
+        JOptionPane.showMessageDialog(null,pfSaida.toString());
+        JOptionPane.showMessageDialog(null,pfSaida.getPessoa().toString());
+        JOptionPane.showMessageDialog(null,pfSaida.getFatec().toString());
 
     }
 
     private static void excluir() throws SQLException, ClassNotFoundException {
         int id = Integer.parseInt(JOptionPane.showInputDialog("ID"));
-        PessoasFatecs plEnt = new PessoasFatecs(id);
-        ControllerPessoasFatecs contPL = new ControllerPessoasFatecs();
-        PessoasFatecs plSaida = contPL.excluir(plEnt);
-        JOptionPane.showMessageDialog(null,plSaida.toString());
+        PessoasFatecs pfEnt = new PessoasFatecs(id);
+        ControllerPessoasFatecs contPF = new ControllerPessoasFatecs();
+        PessoasFatecs pfSaida = contPF.excluir(pfEnt);
+        JOptionPane.showMessageDialog(null,pfSaida.toString());
     }
 
     private static void listar() throws SQLException, ClassNotFoundException {
         String obs = JOptionPane.showInputDialog("OBS");
-        PessoasFatecs plEnt = new PessoasFatecs(obs);
-        ControllerPessoasFatecs contPL = new ControllerPessoasFatecs();
-        List<PessoasFatecs> listaPessoasLogradouros = contPL.listar(plEnt);
-        for (PessoasFatecs plSaida : listaPessoasLogradouros) {
-            JOptionPane.showMessageDialog(null,plSaida.toString());
-            JOptionPane.showMessageDialog(null,plSaida.getPessoa().toString());
-            JOptionPane.showMessageDialog(null,plSaida.getFatec().toString());
+        PessoasFatecs pfEnt = new PessoasFatecs(obs);
+        ControllerPessoasFatecs contPF = new ControllerPessoasFatecs();
+        List<PessoasFatecs> listaPessoasLogradouros = contPF.listar(pfEnt);
+        for (PessoasFatecs pfSaida : listaPessoasLogradouros) {
+            JOptionPane.showMessageDialog(null,pfSaida.toString());
+            JOptionPane.showMessageDialog(null,pfSaida.getPessoa().toString());
+            JOptionPane.showMessageDialog(null,pfSaida.getFatec().toString());
         }
     }
 
