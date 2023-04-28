@@ -35,8 +35,8 @@ public class ControllerDepartamento {
 
      public List<Departamento> listar(Departamento depEnt) throws SQLException, ClassNotFoundException {
         daoDep = new DaoDepartamento();
-        List<Departamento> listaDepartamentos = daoDep.listar(depEnt);
-        return listaDepartamentos;
+        List<Departamento> listaDepartamento = daoDep.listar(depEnt);
+        return listaDepartamento;
      }
    
 }

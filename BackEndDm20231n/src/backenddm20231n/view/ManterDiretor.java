@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 public class ManterDiretor {
 
     public static void menu() throws SQLException, ClassNotFoundException {
-        String msg = " 1 - Inserir \n 2 - Alterar \n 3 - buscar \n 4 - excluir \n 5 - Listar " ;
+        String msg = " 1 - Inserir \n 2 - Alterar \n 3 - Buscar \n 4 - Excluir \n 5 - Listar " ;
         int num = Integer.parseInt(JOptionPane.showInputDialog(msg));
         switch (num) {
             case 1:
@@ -74,8 +74,8 @@ public class ManterDiretor {
     }
 
     private static void listar() throws SQLException, ClassNotFoundException {
-        String nome = JOptionPane.showInputDialog("NOME");
-        Diretor dirEnt = new Diretor(nome);
+        String setor = JOptionPane.showInputDialog("SETOR");
+        Diretor dirEnt = new Diretor(setor);
         ControllerDiretor contDir = new ControllerDiretor();
         List<Diretor> listaDiretores = contDir.listar(dirEnt);
         for (Diretor dirSaida : listaDiretores) {

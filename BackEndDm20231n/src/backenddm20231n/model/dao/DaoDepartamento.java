@@ -79,7 +79,7 @@ private final Connection c;
     }
 
     public Departamento alterar(Departamento depEnt) throws SQLException{
-        String sql = "UPDATE departamentos SET nome = ?, descricao = ? WHERE id = ?";
+        String sql = "UPDATE departamentos SET nome = ?, cod = ?, descricao = ? WHERE id = ?";
         // prepared statement para inserção
         PreparedStatement stmt = c.prepareStatement(sql);
         // seta os valores
@@ -99,7 +99,7 @@ private final Connection c;
 
         List<Departamento> departamentos = new ArrayList<>();
         
-        String sql = "select * from departamentos where cod like ?";
+        String sql = "select * from departamentos where nome like ?";
         PreparedStatement stmt = this.c.prepareStatement(sql);
         // seta os valores
         stmt.setString(1,"%" + depEnt.getNome() + "%");

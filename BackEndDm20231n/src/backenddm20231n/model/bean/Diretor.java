@@ -15,8 +15,8 @@ public class Diretor {
         this.Id = id;
     }
     
-    public Diretor(String nome) {
-        this.nome = nome;
+    public Diretor(String setor) {
+        this.setor = setor;
     }
     
     public Diretor(String nome, String setor, String obs) {
@@ -67,7 +67,7 @@ public class Diretor {
 
     @Override
     public String toString() {
-        return "Diretor{" + "Id=" + Id + ", nome=" + nome + ", setor=" + setor + ", obs=" + obs + '}';
+        return "Diretor {" + "Id = " + Id + ", nome = " + nome + ", setor = " + setor + ", obs = " + obs + '}';
     }
 
 }

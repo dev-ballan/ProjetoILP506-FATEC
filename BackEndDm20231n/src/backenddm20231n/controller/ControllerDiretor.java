@@ -35,8 +35,8 @@ public class ControllerDiretor {
 
      public List<Diretor> listar(Diretor dirEnt) throws SQLException, ClassNotFoundException {
         daoDir = new DaoDiretor();
-        List<Diretor> listaDiretores = daoDir.listar(dirEnt);
-        return listaDiretores;
+        List<Diretor> listaDiretor = daoDir.listar(dirEnt);
+        return listaDiretor;
      }
    
 }

@@ -99,10 +99,10 @@ private final Connection c;
 
         List<Diretor> diretores = new ArrayList<>();
         
-        String sql = "select * from diretores where nome like ?";
+        String sql = "select * from diretores where setor like ?";
         PreparedStatement stmt = this.c.prepareStatement(sql);
         // seta os valores
-        stmt.setString(1,"%" + dirEnt.getNome() + "%");
+        stmt.setString(1,"%" + dirEnt.getSetor() + "%");
         
         ResultSet rs = stmt.executeQuery();
         
